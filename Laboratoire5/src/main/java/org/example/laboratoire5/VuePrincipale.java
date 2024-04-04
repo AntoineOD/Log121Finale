@@ -32,7 +32,6 @@ public class VuePrincipale extends Application {
 
         Button btnQuitter = new Button("Quitter");
         grid.add(btnQuitter, 1, 0);
-
         
 
 //        Text scenetitle = new Text("Paramètres pour la visualisation du tri:");
