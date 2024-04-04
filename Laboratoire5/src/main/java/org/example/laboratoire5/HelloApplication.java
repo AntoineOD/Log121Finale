@@ -1,4 +1,4 @@
-package com.example.dernierlablog121;
+package org.example.laboratoire5;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

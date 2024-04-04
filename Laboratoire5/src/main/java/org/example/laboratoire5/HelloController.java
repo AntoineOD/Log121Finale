@@ -1,4 +1,4 @@
-package com.example.dernierlablog121;
+package org.example.laboratoire5;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
