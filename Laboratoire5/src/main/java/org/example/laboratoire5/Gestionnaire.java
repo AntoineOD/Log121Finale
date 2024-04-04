@@ -15,6 +15,11 @@ public final class Gestionnaire {
         return gestionnaire;
     }
 
+    public Perspective getPerspective()
+    {
+        return p;
+    }
+
     public void execute(Commande c) {
 
         historique.add(c);

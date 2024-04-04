@@ -1,12 +1,15 @@
 package org.example.laboratoire5;
 
 public class Controleur {
-    Image image;
-    Perspective perspective;
+    ImageSave image;
 
     public Controleur()
     {
-        perspective=new Perspective();
+        image = new ImageSave();
+    }
+
+    public void importer()
+    {
 
     }
 
