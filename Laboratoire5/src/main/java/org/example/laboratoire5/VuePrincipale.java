@@ -41,35 +41,25 @@ public class VuePrincipale extends Application {
         iv.setFitWidth(400);
         grid.add(iv, 2,5);
 
-//        Text scenetitle = new Text("Paramètres pour la visualisation du tri:");
-//        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
-//        grid.add(scenetitle, 0, 0, 2, 1);
-//
-//        Label typeTri = new Label("Choix du type de tri:");
-//        grid.add(typeTri, 0, 2, 2,1);
-//
-//        ChoiceBox choiceBox = new ChoiceBox();
-//        choiceBox.setValue("Sélectionnez un type");
-//        choiceBox.getItems().add("Merge Sort");
-//        choiceBox.getItems().add("Quick Sort");
-//        grid.add(choiceBox, 2, 2, 3,1);
-//
-//        Label vals = new Label("Entrez les valeurs à trier (val1,val2 ...):");
-//        grid.add(vals, 0, 3, 2,1);
-//
-//        TextField inputVals = new TextField();
-//        grid.add(inputVals,2,3,2,1);
-//
-//        Button btnOk = new Button("Ok");
-//        grid.add(btnOk, 4,8);
-//
-//        Button btnAnnuler = new Button("Annuler");
-//        grid.add(btnAnnuler,5,8);
-//
-//        Button btnAppliquer = new Button("Appliquer");
-//        grid.add(btnAppliquer,6,8);
+        Button btnUp = new Button("^");
+        grid.add(btnUp, 4, 10);
 
-        Scene scene = new Scene(grid, 700, 500);
+        Button btnDown = new Button("⌄");
+        grid.add(btnDown, 4, 12);
+
+        Button btnGauche = new Button("<");
+        grid.add(btnGauche, 3, 11);
+
+        Button btnDroite = new Button(">");
+        grid.add(btnDroite, 5, 11);
+
+        Button btnZoom = new Button("+");
+        grid.add(btnZoom, 7, 10);
+
+        Button btnDeZoom = new Button("-");
+        grid.add(btnDeZoom, 7, 12);
+
+        Scene scene = new Scene(grid, 750, 500);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
