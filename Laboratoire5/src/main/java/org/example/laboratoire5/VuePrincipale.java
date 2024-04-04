@@ -8,11 +8,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.scene.image.Image ;
 
 public class VuePrincipale extends Application {
 
@@ -32,7 +34,12 @@ public class VuePrincipale extends Application {
 
         Button btnQuitter = new Button("Quitter");
         grid.add(btnQuitter, 1, 0);
-        
+
+        Image image = new Image("file:beautiful-fantasy-landscape-desktop-wallpaper-preview.png");
+        ImageView iv = new ImageView(image);
+        iv.setPreserveRatio(true);
+        iv.setFitWidth(400);
+        grid.add(iv, 2,5);
 
 //        Text scenetitle = new Text("Paramètres pour la visualisation du tri:");
 //        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
