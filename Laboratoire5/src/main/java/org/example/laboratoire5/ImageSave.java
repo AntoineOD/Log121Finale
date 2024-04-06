@@ -2,17 +2,16 @@ package org.example.laboratoire5;
 
 import java.util.ArrayList;
 import java.util.List;
-import javafx.scene.image.Image;
 
-public class Perspective implements Subject {
-    Image image;
+public class ImageSave implements Subject {
+    ImageSave image;
     List<Observer> observerList= new ArrayList<Observer>();
 
-    public Image getImage() {
+    public ImageSave getImage() {
         return image;
     }
 
-    public void setImage(Image image) {
+    public void setImage(ImageSave image) {
         this.image = image;
     }
 
@@ -31,4 +30,5 @@ public class Perspective implements Subject {
             o.update(this);
         }
     }
+
 }

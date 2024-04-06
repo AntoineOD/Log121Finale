@@ -17,4 +17,34 @@ public class Controleur {
         iv2.setImage(image);
         ivMini.setImage(image);
     }
+    ImageSave imageSave;
+
+    public Controleur()
+    {
+        imageSave = new ImageSave();
+    }
+
+    public void importer()
+    {
+
+    }
+
+    public void sauvegarder(){
+
+    }
+    public void zoom()
+    {
+        Zoom z= new Zoom();
+        Gestionnaire.getInstance().execute(z);
+
+    }
+    public void translation()
+    {
+        Commande c= new Translation();
+        Gestionnaire.getInstance().execute(c);
+    }
+    public void undo()
+    {
+        Gestionnaire.getInstance().undo();
+    }
 }
