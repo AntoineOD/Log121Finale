@@ -3,20 +3,89 @@ package org.example.laboratoire5;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.ScrollEvent;
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
 
-public class Controleur {
+public class Controleur{
     @FXML
     ImageView iv1;
     @FXML
     ImageView iv2;
     @FXML
     ImageView ivMini;
+    @FXML
+    Pane paneI1;
+    @FXML
+    Pane paneI2;
     Image image = new Image(getClass().getResourceAsStream("/Images/beautiful-fantasy-landscape-desktop-wallpaper-preview.png"));
+    private double orgSceneX, orgSceneY;
+    private double orgTranslateX, orgTranslateY;
+    private double minScale = 0.5;
+    private double maxScale = 2.0;
+
     public void initialize() {
+        // Set images
         iv1.setImage(image);
         iv2.setImage(image);
         ivMini.setImage(image);
+
+        // Set clips
+        Rectangle clip1 = new Rectangle();
+        clip1.widthProperty().bind(iv1.fitWidthProperty());
+        clip1.heightProperty().bind(iv1.fitHeightProperty());
+        iv1.setClip(clip1);
+
+        Rectangle clip2 = new Rectangle();
+        clip2.widthProperty().bind(iv2.fitWidthProperty());
+        clip2.heightProperty().bind(iv2.fitHeightProperty());
+        iv2.setClip(clip2);
+
+        // Set up event handlers
+        iv1.setOnScroll(event -> handleScroll(event, iv1));
+        iv2.setOnScroll(event -> handleScroll(event, iv2));
+
+        iv1.setOnMousePressed(this::handleMousePressed);
+        iv1.setOnMouseDragged(this::handleMouseDragged);
+        iv2.setOnMousePressed(this::handleMousePressed);
+        iv2.setOnMouseDragged(this::handleMouseDragged);
     }
+
+    private void handleScroll(ScrollEvent event, ImageView iv) {
+        double deltaY = event.getDeltaY();
+        double scaleFactor = (deltaY > 0) ? 1.05 : 1 / 1.05;
+
+        double scale = iv.getScaleX() * scaleFactor;
+        if (scale < minScale || scale > maxScale)
+            return;
+
+        iv.setScaleX(scale);
+        iv.setScaleY(scale);
+
+        ((Rectangle) iv.getClip()).setWidth(iv.getBoundsInParent().getWidth() / scale);
+        ((Rectangle) iv.getClip()).setHeight(iv.getBoundsInParent().getHeight() / scale);
+
+        event.consume();
+    }
+
+    private void handleMousePressed(MouseEvent event) {
+        orgSceneX = event.getSceneX();
+        orgSceneY = event.getSceneY();
+        orgTranslateX = ((ImageView) (event.getSource())).getTranslateX();
+        orgTranslateY = ((ImageView) (event.getSource())).getTranslateY();
+    }
+
+    private void handleMouseDragged(MouseEvent event) {
+        double offsetX = event.getSceneX() - orgSceneX;
+        double offsetY = event.getSceneY() - orgSceneY;
+        double newTranslateX = orgTranslateX + offsetX;
+        double newTranslateY = orgTranslateY + offsetY;
+
+        ((ImageView) (event.getSource())).setTranslateX(newTranslateX);
+        ((ImageView) (event.getSource())).setTranslateY(newTranslateY);
+    }
+    public
     ImageSave imageSave;
 
     public Controleur()
