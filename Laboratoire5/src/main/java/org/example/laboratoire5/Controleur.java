@@ -1,6 +1,7 @@
 package org.example.laboratoire5;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
@@ -16,9 +17,11 @@ public class Controleur{
     @FXML
     ImageView ivMini;
     @FXML
-    Pane paneI1;
+    ScrollPane paneI1;
     @FXML
-    Pane paneI2;
+    ScrollPane paneI2;
+    Rectangle rec1;
+    Rectangle rec2;
     Image image = new Image(getClass().getResourceAsStream("/Images/beautiful-fantasy-landscape-desktop-wallpaper-preview.png"));
     private double orgSceneX, orgSceneY;
     private double orgTranslateX, orgTranslateY;
@@ -26,23 +29,12 @@ public class Controleur{
     private double maxScale = 2.0;
 
     public void initialize() {
-        // Set images
+
         iv1.setImage(image);
         iv2.setImage(image);
         ivMini.setImage(image);
 
-        // Set clips
-        Rectangle clip1 = new Rectangle();
-        clip1.widthProperty().bind(iv1.fitWidthProperty());
-        clip1.heightProperty().bind(iv1.fitHeightProperty());
-        iv1.setClip(clip1);
 
-        Rectangle clip2 = new Rectangle();
-        clip2.widthProperty().bind(iv2.fitWidthProperty());
-        clip2.heightProperty().bind(iv2.fitHeightProperty());
-        iv2.setClip(clip2);
-
-        // Set up event handlers
         iv1.setOnScroll(event -> handleScroll(event, iv1));
         iv2.setOnScroll(event -> handleScroll(event, iv2));
 
