@@ -30,35 +30,31 @@ public class Controleur{
 
     public void initialize() {
 
-        iv1.setImage(image);
-        iv2.setImage(image);
+        perspective1 = new Perspective();
+        perspective1.setImage(image);
+        perspective1.addObserver(new VueImg1(iv1));
+        iv1.setOnScroll(event->zoom(event, perspective1));
+
+//        iv1.setImage(image);
+//        iv2.setImage(image);
         ivMini.setImage(image);
-
-
-        iv1.setOnScroll(event -> handleScroll(event, iv1));
-        iv2.setOnScroll(event -> handleScroll(event, iv2));
-
-        iv1.setOnMousePressed(this::handleMousePressed);
-        iv1.setOnMouseDragged(this::handleMouseDragged);
-        iv2.setOnMousePressed(this::handleMousePressed);
-        iv2.setOnMouseDragged(this::handleMouseDragged);
+//
+//
+//        iv1.setOnScroll(event -> handleScroll(event, iv1));
+//        iv2.setOnScroll(event -> handleScroll(event, iv2));
+//
+//        iv1.setOnMousePressed(this::handleMousePressed);
+//        iv1.setOnMouseDragged(this::handleMouseDragged);
+//        iv2.setOnMousePressed(this::handleMousePressed);
+//        iv2.setOnMouseDragged(this::handleMouseDragged);
     }
 
-    private void handleScroll(ScrollEvent event, ImageView iv) {
-        double deltaY = event.getDeltaY();
-        double scaleFactor = (deltaY > 0) ? 1.05 : 1 / 1.05;
+    public Image getImage() {
+        return image;
+    }
 
-        double scale = iv.getScaleX() * scaleFactor;
-        if (scale < minScale || scale > maxScale)
-            return;
-
-        iv.setScaleX(scale);
-        iv.setScaleY(scale);
-
-        ((Rectangle) iv.getClip()).setWidth(iv.getBoundsInParent().getWidth() / scale);
-        ((Rectangle) iv.getClip()).setHeight(iv.getBoundsInParent().getHeight() / scale);
-
-        event.consume();
+    public void setImage(Image image) {
+        this.image = image;
     }
 
     private void handleMousePressed(MouseEvent event) {
@@ -77,12 +73,13 @@ public class Controleur{
         ((ImageView) (event.getSource())).setTranslateX(newTranslateX);
         ((ImageView) (event.getSource())).setTranslateY(newTranslateY);
     }
-    public
-    ImageSave imageSave;
+    public ImageSave imageSave;
+    public Perspective perspective1;
+    public Perspective perspective2;
 
     public Controleur()
     {
-        imageSave = new ImageSave();
+
     }
 
     public void importer()
@@ -93,9 +90,9 @@ public class Controleur{
     public void sauvegarder(){
 
     }
-    public void zoom()
+    public void zoom(ScrollEvent event, Perspective perspective)
     {
-        Zoom z= new Zoom();
+        Zoom z= new Zoom(event.getDeltaY(), perspective);
         Gestionnaire.getInstance().execute(z);
 
     }

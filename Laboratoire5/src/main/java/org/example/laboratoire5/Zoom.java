@@ -3,16 +3,32 @@ package org.example.laboratoire5;
 import javafx.scene.image.Image;
 
 public class Zoom implements Commande {
-    private Image state;
+
+    Perspective perspective;
+    double zoom;
+    double scale;
+    double previousScale;
+
+    private double minScale = 0.5;
+    private double maxScale = 2.0;
+
+    public Zoom(double zoom, Perspective perspective)
+    {
+        this.zoom=zoom;
+        this.perspective=perspective;
+    }
     public void execute()
     {
-        state = Gestionnaire.getInstance().getPerspective().getImage();
+        double scaleFactor = (zoom > 0) ? 1.05: 1 / 1.05;
 
-
+        scale = perspective.getCurrentScale() * scaleFactor;
+        if (scale < minScale || scale > maxScale)
+            return;
+        perspective.setCurrentScale(scale);
     }
     public void undo()
     {
-        Gestionnaire.getInstance().getPerspective().setImage(state);
+        perspective.setCurrentScale(scale);
 
     }
 }
