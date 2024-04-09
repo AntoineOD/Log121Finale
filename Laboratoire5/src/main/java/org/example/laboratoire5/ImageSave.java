@@ -5,7 +5,7 @@ import javafx.scene.image.Image;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImageSave implements Subject {
+public class ImageSave  {
     Image image;
     Double currentScale;
     List<Observer> observerList= new ArrayList<Observer>();
@@ -37,7 +37,7 @@ public class ImageSave implements Subject {
     {
         for(Observer o :observerList)
         {
-            o.update(this);
+
         }
     }
 

@@ -9,7 +9,8 @@ public class Perspective implements Subject {
     Double currentScale = 1.0;
     Image image;
     List<Observer> observerList= new ArrayList<Observer>();
-
+    double positionX;
+    double positionY;
     public Image getImage() {
         return image;
     }
@@ -20,6 +21,24 @@ public class Perspective implements Subject {
 
     public void setCurrentScale(Double currentScale) {
         this.currentScale = currentScale;
+        notifyObservers();
+    }
+
+    public double getPositionX() {
+        return positionX;
+    }
+
+    public double getPositionY() {
+        return positionY;
+    }
+
+    public void setPositionX(double positionX) {
+        this.positionX = positionX;
+        notifyObservers();
+    }
+
+    public void setPositionY(double positionY) {
+        this.positionY = positionY;
         notifyObservers();
     }
 

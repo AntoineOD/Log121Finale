@@ -14,7 +14,7 @@ public class VueImg1 implements Observer{
     @FXML ImageView iv1;
     public VueImg1(ImageView imageView){
         iv1=imageView;
-        System.out.println(iv1.getScaleX());
+
     }
 
     @Override
@@ -22,7 +22,8 @@ public class VueImg1 implements Observer{
         iv1.setImage(s.getImage());
         iv1.setScaleX( s.getCurrentScale());
         iv1.setScaleY(s.getCurrentScale());
-        System.out.println(iv1.getScaleX());
+        iv1.setTranslateX(s.getPositionX());
+        iv1.setTranslateY(s.getPositionY());
     }
 
     @Override

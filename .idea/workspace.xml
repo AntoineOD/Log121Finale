@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ba6f7031-434d-4768-9dc7-d497601dcfe4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Log121Finale.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/src/main/java/com/example/dernierlablog121/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/src/main/java/com/example/dernierlablog121/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DernierLabLog121/src/main/resources/com/example/dernierlablog121/hello-view.fxml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Controleur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/ImageSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/ImageSave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Perspective.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Perspective.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Translation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Translation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/VueImg1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/VueImg1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Zoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Zoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/resources/fxml/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/resources/fxml/Main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2edxgl3PmteQVFhr6lwSq8Oo66h" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,10 +45,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Laure/Documents/GitHub/Log121Finale"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -64,5 +71,16 @@
       <updated>1712248371824</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Translation.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

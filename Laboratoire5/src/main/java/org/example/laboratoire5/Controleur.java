@@ -1,6 +1,7 @@
 package org.example.laboratoire5;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
@@ -20,13 +21,10 @@ public class Controleur{
     ScrollPane paneI1;
     @FXML
     ScrollPane paneI2;
-    Rectangle rec1;
-    Rectangle rec2;
+    @FXML
+    MenuItem Undo;
     Image image = new Image(getClass().getResourceAsStream("/Images/beautiful-fantasy-landscape-desktop-wallpaper-preview.png"));
     private double orgSceneX, orgSceneY;
-    private double orgTranslateX, orgTranslateY;
-    private double minScale = 0.5;
-    private double maxScale = 2.0;
 
     public void initialize() {
 
@@ -34,19 +32,17 @@ public class Controleur{
         perspective1.setImage(image);
         perspective1.addObserver(new VueImg1(iv1));
         iv1.setOnScroll(event->zoom(event, perspective1));
+        iv1.setOnMousePressed(this::handleMousePressed);
+        iv1.setOnMouseReleased(event->translation(event,perspective1));
+        Undo.setOnAction(event -> undo());
 
-//        iv1.setImage(image);
-//        iv2.setImage(image);
+        perspective2=new Perspective();
+        perspective2.setImage(image);
+        perspective2.addObserver(new VueImg1(iv2));
+        iv2.setOnScroll(event->zoom(event,perspective2));
+        iv2.setOnMousePressed(this::handleMousePressed);
+        iv2.setOnMouseReleased(event->translation(event,perspective2));
         ivMini.setImage(image);
-//
-//
-//        iv1.setOnScroll(event -> handleScroll(event, iv1));
-//        iv2.setOnScroll(event -> handleScroll(event, iv2));
-//
-//        iv1.setOnMousePressed(this::handleMousePressed);
-//        iv1.setOnMouseDragged(this::handleMouseDragged);
-//        iv2.setOnMousePressed(this::handleMousePressed);
-//        iv2.setOnMouseDragged(this::handleMouseDragged);
     }
 
     public Image getImage() {
@@ -60,27 +56,11 @@ public class Controleur{
     private void handleMousePressed(MouseEvent event) {
         orgSceneX = event.getSceneX();
         orgSceneY = event.getSceneY();
-        orgTranslateX = ((ImageView) (event.getSource())).getTranslateX();
-        orgTranslateY = ((ImageView) (event.getSource())).getTranslateY();
     }
 
-    private void handleMouseDragged(MouseEvent event) {
-        double offsetX = event.getSceneX() - orgSceneX;
-        double offsetY = event.getSceneY() - orgSceneY;
-        double newTranslateX = orgTranslateX + offsetX;
-        double newTranslateY = orgTranslateY + offsetY;
-
-        ((ImageView) (event.getSource())).setTranslateX(newTranslateX);
-        ((ImageView) (event.getSource())).setTranslateY(newTranslateY);
-    }
-    public ImageSave imageSave;
     public Perspective perspective1;
     public Perspective perspective2;
 
-    public Controleur()
-    {
-
-    }
 
     public void importer()
     {
@@ -96,9 +76,10 @@ public class Controleur{
         Gestionnaire.getInstance().execute(z);
 
     }
-    public void translation()
+    public void translation(MouseEvent event, Perspective perspective)
     {
-        Commande c= new Translation();
+        System.out.println("oui");
+        Commande c= new Translation(event, orgSceneX,orgSceneY, perspective);
         Gestionnaire.getInstance().execute(c);
     }
     public void undo()

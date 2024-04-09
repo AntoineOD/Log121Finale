@@ -19,16 +19,16 @@ public class Zoom implements Commande {
     }
     public void execute()
     {
+        previousScale = perspective.getCurrentScale();
         double scaleFactor = (zoom > 0) ? 1.05: 1 / 1.05;
 
-        scale = perspective.getCurrentScale() * scaleFactor;
+        scale = previousScale * scaleFactor;
         if (scale < minScale || scale > maxScale)
             return;
         perspective.setCurrentScale(scale);
     }
     public void undo()
     {
-        perspective.setCurrentScale(scale);
-
+        perspective.setCurrentScale(previousScale);
     }
 }
