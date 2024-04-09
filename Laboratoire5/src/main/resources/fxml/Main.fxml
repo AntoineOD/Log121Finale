@@ -11,14 +11,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.laboratoire5.Controleur">
    <children>
       <HBox layoutY="29.0" prefHeight="386.0" prefWidth="608.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.666666666666686">
          <children>
-            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" style="-fx-border-color: black; -fx-border-width: 2px;" HBox.hgrow="ALWAYS">
                <children>
                   <ScrollPane fx:id="paneI1" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="381.0" prefWidth="299.0" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
                      <content>
@@ -31,14 +30,9 @@
                   </ScrollPane>
                </children>
             </VBox>
-            <VBox HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+            <VBox alignment="CENTER" style="-fx-border-color: black; -fx-border-width: 2px;" HBox.hgrow="ALWAYS">
                <children>
-                  <Line endX="-35.0" endY="179.0" startX="-33.16175842285156" startY="562.1715087890625" strokeWidth="4.0" VBox.vgrow="ALWAYS" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
-               <children>
-                  <ScrollPane fx:id="paneI2" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="374.0" prefWidth="299.0" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                  <ScrollPane fx:id="paneI2" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="529.0" prefWidth="299.0" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
                      <content>
                         <ImageView id="iv2" fx:id="iv2" fitHeight="374.0" fitWidth="299.0" pickOnBounds="true">
                            <cursor>
