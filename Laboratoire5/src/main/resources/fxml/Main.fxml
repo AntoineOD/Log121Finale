@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -7,30 +8,50 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.laboratoire5.Controleur">
    <children>
-      <ScrollPane fx:id="paneI1" hbarPolicy="NEVER" layoutY="21.0" prefHeight="381.0" prefWidth="299.0" vbarPolicy="NEVER">
-         <content>
-            <ImageView fx:id="iv1" fitHeight="373.0" fitWidth="300.0" pickOnBounds="true">
-               <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
-               </cursor>
-            </ImageView>
-         </content>
-      </ScrollPane>
-      <ScrollPane fx:id="paneI2" hbarPolicy="NEVER" layoutX="301.0" layoutY="29.0" prefHeight="374.0" prefWidth="299.0" vbarPolicy="NEVER">
-         <content>
-            <ImageView id="iv2" fx:id="iv2" fitHeight="374.0" fitWidth="299.0" pickOnBounds="true">
-               <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
-               </cursor>
-            </ImageView>
-         </content>
-      </ScrollPane>
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+      <HBox layoutY="29.0" prefHeight="386.0" prefWidth="608.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.666666666666686">
+         <children>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <ScrollPane fx:id="paneI1" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="381.0" prefWidth="299.0" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                     <content>
+                        <ImageView fx:id="iv1" fitHeight="373.0" fitWidth="300.0" pickOnBounds="true">
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </ImageView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+               <children>
+                  <Line endX="-35.0" endY="179.0" startX="-33.16175842285156" startY="562.1715087890625" strokeWidth="4.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <ScrollPane fx:id="paneI2" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="374.0" prefWidth="299.0" vbarPolicy="NEVER" VBox.vgrow="ALWAYS">
+                     <content>
+                        <ImageView id="iv2" fx:id="iv2" fitHeight="374.0" fitWidth="299.0" pickOnBounds="true">
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </ImageView>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -45,8 +66,19 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Line endX="-35.0" endY="179.0" layoutX="335.0" layoutY="221.0" startX="-35.0" startY="-124.0" strokeWidth="4.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="101.0" layoutX="202.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" width="197.0" />
-      <ImageView fx:id="ivMini" fitHeight="77.0" fitWidth="140.0" layoutX="230.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+      <StackPane pickOnBounds="false" prefHeight="400.0" prefWidth="611.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="101.0" stroke="BLACK" strokeType="INSIDE" width="200.0" StackPane.alignment="TOP_CENTER">
+               <StackPane.margin>
+                  <Insets top="27.0" />
+               </StackPane.margin>
+            </Rectangle>
+            <ImageView fx:id="ivMini" fitHeight="77.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_CENTER">
+               <StackPane.margin>
+                  <Insets top="40.0" />
+               </StackPane.margin>
+            </ImageView>
+         </children>
+      </StackPane>
    </children>
 </AnchorPane>
