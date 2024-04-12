@@ -1,18 +1,12 @@
 package org.example.laboratoire5;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.input.ScrollEvent;
-import javafx.scene.layout.Pane;
-import javafx.scene.shape.Rectangle;
 
-public class VueImg1 implements Observer{
+public class VueImg implements Observer{
     Controleur controleur;
     @FXML ImageView iv1;
-    public VueImg1(ImageView imageView){
+    public VueImg(ImageView imageView){
         iv1=imageView;
 
     }

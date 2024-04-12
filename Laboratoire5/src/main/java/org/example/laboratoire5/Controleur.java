@@ -7,8 +7,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
-import javafx.scene.layout.Pane;
-import javafx.scene.shape.Rectangle;
 
 public class Controleur{
     @FXML
@@ -30,7 +28,7 @@ public class Controleur{
 
         perspective1 = new Perspective();
         perspective1.setImage(image);
-        perspective1.addObserver(new VueImg1(iv1));
+        perspective1.addObserver(new VueImg(iv1));
         iv1.setOnScroll(event->zoom(event, perspective1));
         iv1.setOnMousePressed(this::handleMousePressed);
         iv1.setOnMouseReleased(event->translation(event,perspective1));
@@ -38,7 +36,7 @@ public class Controleur{
 
         perspective2=new Perspective();
         perspective2.setImage(image);
-        perspective2.addObserver(new VueImg1(iv2));
+        perspective2.addObserver(new VueImg(iv2));
         iv2.setOnScroll(event->zoom(event,perspective2));
         iv2.setOnMousePressed(this::handleMousePressed);
         iv2.setOnMouseReleased(event->translation(event,perspective2));
