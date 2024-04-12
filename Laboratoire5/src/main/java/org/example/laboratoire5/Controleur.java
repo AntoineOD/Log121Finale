@@ -84,7 +84,6 @@ public class Controleur{
     }
     public void translation(MouseEvent event, Perspective perspective)
     {
-        System.out.println("oui");
         Commande c= new Translation(event, orgSceneX,orgSceneY, perspective);
         Gestionnaire.getInstance().execute(c);
     }

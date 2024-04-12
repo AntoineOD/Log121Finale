@@ -8,7 +8,6 @@ public class VueImg implements Observer{
     @FXML ImageView iv1;
     public VueImg(ImageView imageView){
         iv1=imageView;
-
     }
 
     @Override
@@ -20,8 +19,4 @@ public class VueImg implements Observer{
         iv1.setTranslateY(s.getPositionY());
     }
 
-    @Override
-    public void afficher() {
-
-    }
 }

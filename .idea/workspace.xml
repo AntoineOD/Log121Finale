@@ -5,19 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba6f7031-434d-4768-9dc7-d497601dcfe4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Controleur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/ImageSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/ImageSave.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Perspective.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Perspective.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Translation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Translation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Gestionnaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Gestionnaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/ImageSave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Singleton.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/VueImg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/VueImg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/VueImg1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/VueImg1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Zoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/java/org/example/laboratoire5/Zoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Laboratoire5/src/main/resources/fxml/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Laboratoire5/src/main/resources/fxml/Main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +41,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Laure/Documents/GitHub/Log121Finale"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Laure/Documents/GitHub/Log121Finale&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

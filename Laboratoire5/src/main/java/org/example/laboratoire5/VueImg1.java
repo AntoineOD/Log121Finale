@@ -29,9 +29,4 @@ public class VueImg1 implements Observer, Serializable {
             iv1.setTranslateY(s.getPositionY());
         }
     }
-
-    @Override
-    public void afficher() {
-
-    }
 }

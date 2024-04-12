@@ -5,7 +5,6 @@ import java.util.List;
 
 public final class Gestionnaire {
     private static Gestionnaire gestionnaire;
-    private Perspective p;
     private List<Commande> historique=new ArrayList<Commande>();
     public static Gestionnaire getInstance(){
         if(gestionnaire==null)
@@ -14,12 +13,6 @@ public final class Gestionnaire {
         }
         return gestionnaire;
     }
-
-    public Perspective getPerspective()
-    {
-        return p;
-    }
-
     public void execute(Commande c) {
 
         historique.add(c);
