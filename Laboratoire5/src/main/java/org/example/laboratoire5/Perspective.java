@@ -1,35 +1,29 @@
 package org.example.laboratoire5;
 
+import javafx.scene.image.Image;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import javafx.scene.image.Image;
 
-public class Perspective implements Subject {
+public class Perspective implements Subject,Serializable {
+    private double currentScale = 1.0;
+    private double positionX = 0.0;
+    private double positionY = 0.0;
+    private transient String imagePath;
+    private final List<Observer> observers = new ArrayList<>();
 
-    Double currentScale = 1.0;
-    Image image;
-    List<Observer> observerList= new ArrayList<Observer>();
-    double positionX;
-    double positionY;
-    public Image getImage() {
-        return image;
-    }
-
-    public Double getCurrentScale() {
+    @Override
+    public double getCurrentScale() {
         return currentScale;
     }
 
+    @Override
     public void setCurrentScale(Double currentScale) {
         this.currentScale = currentScale;
         notifyObservers();
     }
-
     public double getPositionX() {
         return positionX;
-    }
-
-    public double getPositionY() {
-        return positionY;
     }
 
     public void setPositionX(double positionX) {
@@ -37,30 +31,43 @@ public class Perspective implements Subject {
         notifyObservers();
     }
 
+    public double getPositionY() {
+        return positionY;
+    }
+
     public void setPositionY(double positionY) {
         this.positionY = positionY;
         notifyObservers();
     }
-
-    public void setImage(Image image) {
-        this.image = image;
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
         notifyObservers();
     }
 
-    public void addObserver(Observer o)
-    {
-        observerList.add(o);
-        o.update(this);
+    public String getImagePath() {
+        return imagePath;
     }
-    public void removeObserver(Observer o)
-    {
-        observerList.add(o);
+    public void setImage(Image image) {
+        this.imagePath = image.getUrl();
+        notifyObservers();
     }
-    public void notifyObservers()
-    {
-        for(Observer o :observerList)
-        {
-            o.update(this);
+    public Image getImage() {
+        return new Image(imagePath);
+    }
+
+    public void addObserver(Observer observer) {
+        if (!observers.contains(observer)) {
+            observers.add(observer);
+        }
+    }
+
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update(this);
         }
     }
 }

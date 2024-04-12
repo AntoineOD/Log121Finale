@@ -49,8 +49,9 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" text="Charger" />
-                  <MenuItem mnemonicParsing="false" text="Save" />
+                <MenuItem fx:id="chargerMenuItem" mnemonicParsing="false" text="Charger" onAction="#handleChargerAction" />
+                <MenuItem fx:id="sauvegarderMenuItem" mnemonicParsing="false" text="Sauvegarder" onAction="#sauvegarder" />
+
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
